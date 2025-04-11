@@ -1,0 +1,16 @@
+atm_cash = []
+
+while True:
+    note = int(input("Enter denomination (₹): "))
+    quantity = int(input("Enter quantity of your Note: "))
+    atm_cash.append((note,quantity))
+    more = input("IF YOU WANT TO ADD MORE\n THEN PRESS Y FOR YES AND N FOR NO:" ).lower()
+    if more!= "y":
+        break
+
+total = 0
+for note, quantity in atm_cash:
+    print(f"₹{note} X {quantity} = {note*quantity}" )
+    total+=note*quantity
+
+print("\nTotal amount  in ATM:",total)
